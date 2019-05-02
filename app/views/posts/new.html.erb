@@ -1,6 +1,8 @@
 <h2>Editing "<%= @post.title %>"</h2>
 
-
+<% @post.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
 
 <%= form_tag post_path(@post), method: "post" do %>
   <div class="field">
