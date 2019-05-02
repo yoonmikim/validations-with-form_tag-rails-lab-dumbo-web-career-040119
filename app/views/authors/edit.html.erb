@@ -1,4 +1,9 @@
 <h2>Editing "<%= @author.title %>"</h2>
+
+<% @author.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+
 <%= form_tag authors_path(@author), method: "patch" do %>
   <div class="field">
     <%= label_tag "name", "Name" %>
