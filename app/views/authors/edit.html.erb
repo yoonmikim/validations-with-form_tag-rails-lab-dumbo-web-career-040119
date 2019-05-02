@@ -1,5 +1,5 @@
 <h2>Edit an Author</h2>
-<%= form_tag authors_path(@author), method: "post" do %>
+<%= form_tag authors_path(@author), method: "patch" do %>
   <div class="field">
     <%= label_tag "name", "Name" %>
     <%= text_field_tag "name" %>
@@ -15,5 +15,5 @@
     <%= text_field_tag "phone_number" %>
   </div>
 
-  <%= submit_tag "Create" %>
+  <%= submit_tag "Edit" %>
 <% end %>
